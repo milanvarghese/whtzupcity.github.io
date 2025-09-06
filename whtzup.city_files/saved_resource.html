@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)https://weatherwidget.io/w/ -->
+<html ng-app="iApp" ng-controller="frameController as fc" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title class="ng-binding">TRIVANDRUM WEATHER</title>
+	<meta name="description" content="TRIVANDRUM WEATHER - WeatherWidget.io">
+	<meta name="viewport" content="width=device-width">
+	<meta name="robots" content="noindex, follow">
+	<!--<base href="https://weatherwidget.io/w/" target="_parent">--><base href="." target="_parent">
+	<link rel="stylesheet" href="./if_w.css">
+	<link rel="stylesheet" ng-href="css/icon-climacons.css" href="./icon-climacons.css">
+
+	<style ww-index-style="" class="ng-binding ng-isolate-scope">
+					
+					
+					
+					html {
+					font-size: 16px;
+					}
+					#weatherWidget {
+					color: #434343;
+					background-color: #ffffff;
+					background-image: none;
+					background-size: unset;
+					background-position: unset;
+					text-shadow: none;
+					}
+					#weatherWidgetInner {
+					background-color: #ffffff;
+					}
+					#weatherWidget .locationName {
+					color: #434343;
+					}
+					#weatherWidget .locationName span {
+					color: #434343;
+					}
+					#weatherWidget .currentTemp {
+					color: #434343;
+					}
+					#weatherWidget .currentDesc {
+					color: #434343;
+					}
+					#weatherWidget .dayName {
+					color: #434343;
+					}
+					#weatherWidget .day:nth-child(odd) {
+					background: rgba(1, 1, 1, 0.02);
+					}
+					#weatherWidget .day .dayTempMax{
+					color: #dc2b2b;
+					}
+					#weatherWidget .day .dayTempMin {
+					color: #1279c2;
+					}
+				
+					/* Icon Colors */
+					#weatherWidget .w-icon .sun {
+					fill: #f98629;
+					}
+				
+					#weatherWidget .w-icon .moon {
+					fill: #878686;
+					}
+				
+					#weatherWidget .w-icon .cloud {
+					fill: #878686;
+					}
+					#weatherWidget .w-icon .cloudfill {
+					fill: #f9f7f7;
+					}
+					#weatherWidget .w-icon .fogLine {
+					fill: #878686;
+					}
+					#weatherWidget .w-icon .lightning {
+					fill: #f98629;
+					}
+					#weatherWidget .w-icon .drizzle {
+					fill: #1279c2;
+					}
+				
+					#weatherWidget .w-icon .flake {
+					fill: #2acccc;
+					}
+					
+					#weatherWidget  .w-icon .hail {
+					fill: #2acccc;
+					}
+				
+					#weatherWidget .w-icon .air {
+					fill: #878686;
+					}
+				
+					/* Open Weather Colors */
+					#openWeather svg {
+					fill: #434343;
+					stroke: #ffffff;
+					}
+				
+					/* Font */
+					#weatherWidget {
+					font-family: Tahoma,Arial,Verdana,Segoe,sans-serif;
+					font-size: 1rem;
+					
+					
+					}
+					
+					/* SVG Shadow */
+					#weatherWidget .w-icon {
+						-webkit-filter: none;
+						filter: none;
+					}
+					</style>
+
+</head>
+<body data-new-gr-c-s-check-loaded="14.1252.0" data-gr-ext-installed="">
+
+<div id="weatherWidget" class="" lang="en" style="display: block;">
+	<!-- ngInclude: '//weatherwidget.io/w/img/ui/open.svg' --><span id="openWeather" ng-include="&#39;//weatherwidget.io/w/img/ui/open.svg&#39;" class="ng-scope"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" width="76" height="76" viewBox="0 0 76 76" enable-background="new 0 0 76.00 76.00" xml:space="preserve" class="ng-scope">
+  <path fill-opacity="1" stroke-width="0.2" stroke-linejoin="round" d="M44.33 19L57 19 57 31.67 52.25 36.42 52.25 27.71 34.83 45.13 30.88 41.17 48.29 23.75 39.58 23.75 44.33 19ZM19 25.33L42.75 25.33 38 30.08 23.75 30.08 23.75 52.25 45.92 52.25 45.92 38 50.67 33.25 50.67 57 19 57 19 25.33Z"></path>
+</svg>
+</span>
+	<div id="weatherWidgetInner" ng-class="[o.language.dir, o.widgetMode.class, o.forecastDaysNum.class, {noLabel: !(o.label_1 || o.label_2), yesLabel: o.label_1 || o.label_2}]" class="ltr yesLabel forecast forDays-3">
+	<a class="weatherInfo" href="https://forecast7.com/en/8d5276d94/thiruvananthapuram/" target="_blank" onmouseenter="more(1)" onmouseleave="more(0)" mg-show="o.weather">
+		<div class="currentWeather" mg-show="!(!o.widgetMode.current &amp;&amp; !(o.label_1 || o.label_2))">
+			<h1 class="locationName ng-binding" mg-show="o.label_1 || o.label_2">TRIVANDRUM<span class="ng-binding"> WEATHER</span></h1>
+
+			<!-- ngRepeat: hacky in o.weather.forecast | limitTo:1 --><div class="currentWeatherIcon ng-scope hidden" ng-repeat="hacky in o.weather.forecast | limitTo:1" mg-show="o.widgetMode.current">
+
+				<!-- ngInclude: '//weatherwidget.io/w/img/icons/'+o.iconSet.url+currentIcon()+'.html' --><div id="icon" ng-include="&#39;//weatherwidget.io/w/img/icons/&#39;+o.iconSet.url+currentIcon()+&#39;.html&#39;" title="mist" class="ng-scope"><div class="w-icon climacons-a fog ng-scope"><div class="cloud"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" enable-background="new 0 0 100 100"><path d="m65.7 43.4c-2.5 0-4.9.8-6.8 2-1.9-8.4-9.4-14.6-18.4-14.6-10.4 0-18.9 8.5-18.9 18.9h-6.3c0-13.9 11.3-25.2 25.2-25.2 9.4 0 17.7 5.2 22 12.9 1-.2 2.1-.3 3.2-.3 8.2 0 15.2 5.3 17.8 12.6h-6.9c-2.2-3.7-6.2-6.3-10.9-6.3"></path></svg></div>	<div class="fogLine"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" enable-background="new 0 0 100 100"><path d="m81.5 62.3h-63c-1.7 0-3.1-1.4-3.1-3.1 0-1.7 1.4-3.1 3.1-3.1h62.9c1.7 0 3.1 1.4 3.1 3.1.1 1.7-1.3 3.1-3 3.1"></path></svg></div><div class="fogLine"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" enable-background="new 0 0 100 100"><path d="m81.5 74.9h-63c-1.7 0-3.1-1.4-3.1-3.1 0-1.7 1.4-3.1 3.1-3.1h62.9c1.7 0 3.1 1.4 3.1 3.1.1 1.7-1.3 3.1-3 3.1"></path></svg></div><div class="fogLine"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" enable-background="new 0 0 100 100"><path d="m18.5 81.2h62.9c1.7 0 3.1 1.4 3.1 3.1 0 1.7-1.4 3.1-3.1 3.1h-62.9c-1.7 0-3.1-1.4-3.1-3.1 0-1.7 1.4-3.1 3.1-3.1"></path></svg></div></div></div>
+
+			</div><!-- end ngRepeat: hacky in o.weather.forecast | limitTo:1 -->
+
+			<div class="currentConditions hidden" mg-show="o.widgetMode.current">
+				<div class="currentTemp ng-binding">27°C</div>
+				<div class="currentDesc ng-binding">mist</div>
+			</div>
+
+		</div>
+
+		<div class="weatherForecast" mg-show="o.widgetMode.forecast">
+			<!-- ngRepeat: day in o.weather.forecast | limitTo:7 --><div class="day ng-scope" ng-repeat="day in o.weather.forecast | limitTo:7">
+				<div class="dayName"><span class="fullDayName ng-binding">Friday</span><span class="abrDayName ng-binding">Fri</span></div>
+				<!-- ngInclude: '//weatherwidget.io/w/img/icons/'+o.iconSet.url+day.icon+'.html' --><div class="dayIcon ng-scope" id="icon0" ng-include="&#39;//weatherwidget.io/w/img/icons/&#39;+o.iconSet.url+day.icon+&#39;.html&#39;" title="light rain"><div class="w-icon climacons-a rain ng-scope"><div class="drizzle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" enable-background="new 0 0 100 100"><path d="m50 56.4c1.8 0 3.2 1.4 3.2 3.2v6.4c0 1.8-1.4 3.2-3.2 3.2-1.8 0-3.2-1.4-3.2-3.2v-6.4c0-1.8 1.4-3.2 3.2-3.2"></path></svg></div><div class="drizzle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" enable-background="new 0 0 100 100"><path d="m62.7 56.4c1.8 0 3.2 1.4 3.2 3.2v6.4c0 1.8-1.4 3.2-3.2 3.2-1.8 0-3.2-1.4-3.2-3.2v-6.4c0-1.8 1.5-3.2 3.2-3.2"></path></svg></div><div class="drizzle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" enable-background="new 0 0 100 100"><path d="m37.3 56.4c1.8 0 3.2 1.4 3.2 3.2v6.4c0 1.8-1.4 3.2-3.2 3.2-1.8 0-3.2-1.4-3.2-3.2v-6.4c0-1.8 1.4-3.2 3.2-3.2"></path></svg></div><div class="cloud"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" enable-background="new 0 0 100 100"><path d="m40.5 75.5c-14.1 0-25.5-11.4-25.5-25.5s11.4-25.5 25.5-25.5c9.6 0 17.9 5.3 22.2 13.1 1.1-.2 2.1-.3 3.2-.3 10.5 0 19.1 8.5 19.1 19.1 0 10.5-8.5 19.1-19.1 19.1-4.4 0-20.4 0-25.4 0"></path><path class="cloudfill" d="m65.9 69.1c7 0 12.7-5.7 12.7-12.7 0-7-5.7-12.7-12.7-12.7-2.5 0-4.9.8-6.9 2.1-2-8.5-9.5-14.8-18.6-14.8-10.5 0-19.1 8.5-19.1 19.1 0 10.5 8.5 19.1 19.1 19.1 5.8-.1 20.7-.1 25.5-.1"></path></svg></div></div></div>
+				<div class="temps">
+					<div class="dayTempMax ng-binding">30°C</div>
+					<div class="dayTempMin ng-binding">24°C</div>
+				</div>
+			</div><!-- end ngRepeat: day in o.weather.forecast | limitTo:7 --><div class="day ng-scope" ng-repeat="day in o.weather.forecast | limitTo:7">
+				<div class="dayName"><span class="fullDayName ng-binding">Saturday</span><span class="abrDayName ng-binding">Sat</span></div>
+				<!-- ngInclude: '//weatherwidget.io/w/img/icons/'+o.iconSet.url+day.icon+'.html' --><div class="dayIcon ng-scope" id="icon1" ng-include="&#39;//weatherwidget.io/w/img/icons/&#39;+o.iconSet.url+day.icon+&#39;.html&#39;" title="broken clouds"><div id="cloudy" class="w-icon climacons-a ng-scope"><div class="cloud"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" enable-background="new 0 0 100 100"><path d="m40.5 75.5c-14.1 0-25.5-11.4-25.5-25.5s11.4-25.5 25.5-25.5c9.6 0 17.9 5.3 22.2 13.1 1.1-.2 2.1-.3 3.2-.3 10.5 0 19.1 8.5 19.1 19.1 0 10.5-8.5 19.1-19.1 19.1-4.4 0-20.4 0-25.4 0"></path><path class="cloudfill" d="m65.9 69.1c7 0 12.7-5.7 12.7-12.7 0-7-5.7-12.7-12.7-12.7-2.5 0-4.9.8-6.9 2.1-2-8.5-9.5-14.8-18.6-14.8-10.5 0-19.1 8.5-19.1 19.1 0 10.5 8.5 19.1 19.1 19.1 5.8-.1 20.7-.1 25.5-.1"></path></svg></div></div></div>
+				<div class="temps">
+					<div class="dayTempMax ng-binding">30°C</div>
+					<div class="dayTempMin ng-binding">24°C</div>
+				</div>
+			</div><!-- end ngRepeat: day in o.weather.forecast | limitTo:7 --><div class="day ng-scope" ng-repeat="day in o.weather.forecast | limitTo:7">
+				<div class="dayName"><span class="fullDayName ng-binding">Sunday</span><span class="abrDayName ng-binding">Sun</span></div>
+				<!-- ngInclude: '//weatherwidget.io/w/img/icons/'+o.iconSet.url+day.icon+'.html' --><div class="dayIcon ng-scope" id="icon2" ng-include="&#39;//weatherwidget.io/w/img/icons/&#39;+o.iconSet.url+day.icon+&#39;.html&#39;" title="broken clouds"><div id="cloudy" class="w-icon climacons-a ng-scope"><div class="cloud"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" enable-background="new 0 0 100 100"><path d="m40.5 75.5c-14.1 0-25.5-11.4-25.5-25.5s11.4-25.5 25.5-25.5c9.6 0 17.9 5.3 22.2 13.1 1.1-.2 2.1-.3 3.2-.3 10.5 0 19.1 8.5 19.1 19.1 0 10.5-8.5 19.1-19.1 19.1-4.4 0-20.4 0-25.4 0"></path><path class="cloudfill" d="m65.9 69.1c7 0 12.7-5.7 12.7-12.7 0-7-5.7-12.7-12.7-12.7-2.5 0-4.9.8-6.9 2.1-2-8.5-9.5-14.8-18.6-14.8-10.5 0-19.1 8.5-19.1 19.1 0 10.5 8.5 19.1 19.1 19.1 5.8-.1 20.7-.1 25.5-.1"></path></svg></div></div></div>
+				<div class="temps">
+					<div class="dayTempMax ng-binding">30°C</div>
+					<div class="dayTempMin ng-binding">24°C</div>
+				</div>
+			</div><!-- end ngRepeat: day in o.weather.forecast | limitTo:7 --><div class="day ng-scope" ng-repeat="day in o.weather.forecast | limitTo:7">
+				<div class="dayName"><span class="fullDayName ng-binding">Monday</span><span class="abrDayName ng-binding">Mon</span></div>
+				<!-- ngInclude: '//weatherwidget.io/w/img/icons/'+o.iconSet.url+day.icon+'.html' --><div class="dayIcon ng-scope" id="icon3" ng-include="&#39;//weatherwidget.io/w/img/icons/&#39;+o.iconSet.url+day.icon+&#39;.html&#39;" title="overcast clouds"><div id="cloudy" class="w-icon climacons-a ng-scope"><div class="cloud"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" enable-background="new 0 0 100 100"><path d="m40.5 75.5c-14.1 0-25.5-11.4-25.5-25.5s11.4-25.5 25.5-25.5c9.6 0 17.9 5.3 22.2 13.1 1.1-.2 2.1-.3 3.2-.3 10.5 0 19.1 8.5 19.1 19.1 0 10.5-8.5 19.1-19.1 19.1-4.4 0-20.4 0-25.4 0"></path><path class="cloudfill" d="m65.9 69.1c7 0 12.7-5.7 12.7-12.7 0-7-5.7-12.7-12.7-12.7-2.5 0-4.9.8-6.9 2.1-2-8.5-9.5-14.8-18.6-14.8-10.5 0-19.1 8.5-19.1 19.1 0 10.5 8.5 19.1 19.1 19.1 5.8-.1 20.7-.1 25.5-.1"></path></svg></div></div></div>
+				<div class="temps">
+					<div class="dayTempMax ng-binding">30°C</div>
+					<div class="dayTempMin ng-binding">24°C</div>
+				</div>
+			</div><!-- end ngRepeat: day in o.weather.forecast | limitTo:7 --><div class="day ng-scope" ng-repeat="day in o.weather.forecast | limitTo:7">
+				<div class="dayName"><span class="fullDayName ng-binding">Tuesday</span><span class="abrDayName ng-binding">Tue</span></div>
+				<!-- ngInclude: '//weatherwidget.io/w/img/icons/'+o.iconSet.url+day.icon+'.html' --><div class="dayIcon ng-scope" id="icon4" ng-include="&#39;//weatherwidget.io/w/img/icons/&#39;+o.iconSet.url+day.icon+&#39;.html&#39;" title="overcast clouds"><div id="cloudy" class="w-icon climacons-a ng-scope"><div class="cloud"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" enable-background="new 0 0 100 100"><path d="m40.5 75.5c-14.1 0-25.5-11.4-25.5-25.5s11.4-25.5 25.5-25.5c9.6 0 17.9 5.3 22.2 13.1 1.1-.2 2.1-.3 3.2-.3 10.5 0 19.1 8.5 19.1 19.1 0 10.5-8.5 19.1-19.1 19.1-4.4 0-20.4 0-25.4 0"></path><path class="cloudfill" d="m65.9 69.1c7 0 12.7-5.7 12.7-12.7 0-7-5.7-12.7-12.7-12.7-2.5 0-4.9.8-6.9 2.1-2-8.5-9.5-14.8-18.6-14.8-10.5 0-19.1 8.5-19.1 19.1 0 10.5 8.5 19.1 19.1 19.1 5.8-.1 20.7-.1 25.5-.1"></path></svg></div></div></div>
+				<div class="temps">
+					<div class="dayTempMax ng-binding">30°C</div>
+					<div class="dayTempMin ng-binding">24°C</div>
+				</div>
+			</div><!-- end ngRepeat: day in o.weather.forecast | limitTo:7 --><div class="day ng-scope" ng-repeat="day in o.weather.forecast | limitTo:7">
+				<div class="dayName"><span class="fullDayName ng-binding">Wednesday</span><span class="abrDayName ng-binding">Wed</span></div>
+				<!-- ngInclude: '//weatherwidget.io/w/img/icons/'+o.iconSet.url+day.icon+'.html' --><div class="dayIcon ng-scope" id="icon5" ng-include="&#39;//weatherwidget.io/w/img/icons/&#39;+o.iconSet.url+day.icon+&#39;.html&#39;" title="light rain"><div class="w-icon climacons-a rain ng-scope"><div class="drizzle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" enable-background="new 0 0 100 100"><path d="m50 56.4c1.8 0 3.2 1.4 3.2 3.2v6.4c0 1.8-1.4 3.2-3.2 3.2-1.8 0-3.2-1.4-3.2-3.2v-6.4c0-1.8 1.4-3.2 3.2-3.2"></path></svg></div><div class="drizzle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" enable-background="new 0 0 100 100"><path d="m62.7 56.4c1.8 0 3.2 1.4 3.2 3.2v6.4c0 1.8-1.4 3.2-3.2 3.2-1.8 0-3.2-1.4-3.2-3.2v-6.4c0-1.8 1.5-3.2 3.2-3.2"></path></svg></div><div class="drizzle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" enable-background="new 0 0 100 100"><path d="m37.3 56.4c1.8 0 3.2 1.4 3.2 3.2v6.4c0 1.8-1.4 3.2-3.2 3.2-1.8 0-3.2-1.4-3.2-3.2v-6.4c0-1.8 1.4-3.2 3.2-3.2"></path></svg></div><div class="cloud"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" enable-background="new 0 0 100 100"><path d="m40.5 75.5c-14.1 0-25.5-11.4-25.5-25.5s11.4-25.5 25.5-25.5c9.6 0 17.9 5.3 22.2 13.1 1.1-.2 2.1-.3 3.2-.3 10.5 0 19.1 8.5 19.1 19.1 0 10.5-8.5 19.1-19.1 19.1-4.4 0-20.4 0-25.4 0"></path><path class="cloudfill" d="m65.9 69.1c7 0 12.7-5.7 12.7-12.7 0-7-5.7-12.7-12.7-12.7-2.5 0-4.9.8-6.9 2.1-2-8.5-9.5-14.8-18.6-14.8-10.5 0-19.1 8.5-19.1 19.1 0 10.5 8.5 19.1 19.1 19.1 5.8-.1 20.7-.1 25.5-.1"></path></svg></div></div></div>
+				<div class="temps">
+					<div class="dayTempMax ng-binding">30°C</div>
+					<div class="dayTempMin ng-binding">24°C</div>
+				</div>
+			</div><!-- end ngRepeat: day in o.weather.forecast | limitTo:7 --><div class="day ng-scope" ng-repeat="day in o.weather.forecast | limitTo:7">
+				<div class="dayName"><span class="fullDayName ng-binding">Thursday</span><span class="abrDayName ng-binding">Thu</span></div>
+				<!-- ngInclude: '//weatherwidget.io/w/img/icons/'+o.iconSet.url+day.icon+'.html' --><div class="dayIcon ng-scope" id="icon6" ng-include="&#39;//weatherwidget.io/w/img/icons/&#39;+o.iconSet.url+day.icon+&#39;.html&#39;" title="light rain"><div class="w-icon climacons-a rain ng-scope"><div class="drizzle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" enable-background="new 0 0 100 100"><path d="m50 56.4c1.8 0 3.2 1.4 3.2 3.2v6.4c0 1.8-1.4 3.2-3.2 3.2-1.8 0-3.2-1.4-3.2-3.2v-6.4c0-1.8 1.4-3.2 3.2-3.2"></path></svg></div><div class="drizzle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" enable-background="new 0 0 100 100"><path d="m62.7 56.4c1.8 0 3.2 1.4 3.2 3.2v6.4c0 1.8-1.4 3.2-3.2 3.2-1.8 0-3.2-1.4-3.2-3.2v-6.4c0-1.8 1.5-3.2 3.2-3.2"></path></svg></div><div class="drizzle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" enable-background="new 0 0 100 100"><path d="m37.3 56.4c1.8 0 3.2 1.4 3.2 3.2v6.4c0 1.8-1.4 3.2-3.2 3.2-1.8 0-3.2-1.4-3.2-3.2v-6.4c0-1.8 1.4-3.2 3.2-3.2"></path></svg></div><div class="cloud"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" enable-background="new 0 0 100 100"><path d="m40.5 75.5c-14.1 0-25.5-11.4-25.5-25.5s11.4-25.5 25.5-25.5c9.6 0 17.9 5.3 22.2 13.1 1.1-.2 2.1-.3 3.2-.3 10.5 0 19.1 8.5 19.1 19.1 0 10.5-8.5 19.1-19.1 19.1-4.4 0-20.4 0-25.4 0"></path><path class="cloudfill" d="m65.9 69.1c7 0 12.7-5.7 12.7-12.7 0-7-5.7-12.7-12.7-12.7-2.5 0-4.9.8-6.9 2.1-2-8.5-9.5-14.8-18.6-14.8-10.5 0-19.1 8.5-19.1 19.1 0 10.5 8.5 19.1 19.1 19.1 5.8-.1 20.7-.1 25.5-.1"></path></svg></div></div></div>
+				<div class="temps">
+					<div class="dayTempMax ng-binding">30°C</div>
+					<div class="dayTempMin ng-binding">24°C</div>
+				</div>
+			</div><!-- end ngRepeat: day in o.weather.forecast | limitTo:7 -->
+		</div>
+	</a>
+	</div>
+</div>
+
+<script>
+
+	function more(over) {
+		if(over){
+			document.getElementById("openWeather").className = "highlight";
+
+		} else {
+			document.getElementById("openWeather").className = "";
+
+		}
+	}
+
+</script>
+
+<!-- Angular https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js -->
+<script src="./angular-1.5.8.min.js.download"></script>
+
+<!-- Weather Widget Frame app -->
+<script src="./iApp.min.js.download"></script>
+
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>

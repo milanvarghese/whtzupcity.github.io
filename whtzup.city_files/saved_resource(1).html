@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)https://weatherwidget.io/w/ -->
+<html ng-app="iApp" ng-controller="frameController as fc" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title class="ng-binding">NEW YORK WEATHER</title>
+	<meta name="description" content="NEW YORK WEATHER - WeatherWidget.io">
+	<meta name="viewport" content="width=device-width">
+	<meta name="robots" content="noindex, follow">
+	<!--<base href="https://weatherwidget.io/w/" target="_parent">--><base href="." target="_parent">
+	<link rel="stylesheet" href="./if_w.css">
+	<link rel="stylesheet" ng-href="">
+
+	<style ww-index-style="" class="ng-binding ng-isolate-scope">
+					
+					
+					
+					html {
+					font-size: 16px;
+					}
+					#weatherWidget {
+					color: #000000;
+					background-color: transparent;
+					background-image: none;
+					background-size: unset;
+					background-position: unset;
+					text-shadow: none;
+					}
+					#weatherWidgetInner {
+					background-color: transparent;
+					}
+					#weatherWidget .locationName {
+					color: #000000;
+					}
+					#weatherWidget .locationName span {
+					color: #000000;
+					}
+					#weatherWidget .currentTemp {
+					color: #000000;
+					}
+					#weatherWidget .currentDesc {
+					color: #000000;
+					}
+					#weatherWidget .dayName {
+					color: #000000;
+					}
+					#weatherWidget .day:nth-child(odd) {
+					background: rgba(0,0,0,0);
+					}
+					#weatherWidget .day .dayTempMax{
+					color: #000000;
+					}
+					#weatherWidget .day .dayTempMin {
+					color: #000000;
+					}
+				
+					/* Icon Colors */
+					#weatherWidget .w-icon .sun {
+					fill: #000000;
+					}
+				
+					#weatherWidget .w-icon .moon {
+					fill: #000000;
+					}
+				
+					#weatherWidget .w-icon .cloud {
+					fill: #000000;
+					}
+					#weatherWidget .w-icon .cloudfill {
+					fill: #000000;
+					}
+					#weatherWidget .w-icon .fogLine {
+					fill: #000000;
+					}
+					#weatherWidget .w-icon .lightning {
+					fill: #000000;
+					}
+					#weatherWidget .w-icon .drizzle {
+					fill: #000000;
+					}
+				
+					#weatherWidget .w-icon .flake {
+					fill: #000000;
+					}
+					
+					#weatherWidget  .w-icon .hail {
+					fill: #000000;
+					}
+				
+					#weatherWidget .w-icon .air {
+					fill: #000000;
+					}
+				
+					/* Open Weather Colors */
+					#openWeather svg {
+					fill: #000000;
+					stroke: transparent;
+					}
+				
+					/* Font */
+					#weatherWidget {
+					font-family: Tahoma,Arial,Verdana,Segoe,sans-serif;
+					font-size: 1rem;
+					
+					
+					}
+					
+					/* SVG Shadow */
+					#weatherWidget .w-icon {
+						-webkit-filter: none;
+						filter: none;
+					}
+					</style>
+
+</head>
+<body data-new-gr-c-s-check-loaded="14.1252.0" data-gr-ext-installed="">
+
+<div id="weatherWidget" class="" lang="en">
+	<!-- ngInclude: '//weatherwidget.io/w/img/ui/open.svg' --><span id="openWeather" ng-include="&#39;//weatherwidget.io/w/img/ui/open.svg&#39;" class="ng-scope"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" width="76" height="76" viewBox="0 0 76 76" enable-background="new 0 0 76.00 76.00" xml:space="preserve" class="ng-scope">
+  <path fill-opacity="1" stroke-width="0.2" stroke-linejoin="round" d="M44.33 19L57 19 57 31.67 52.25 36.42 52.25 27.71 34.83 45.13 30.88 41.17 48.29 23.75 39.58 23.75 44.33 19ZM19 25.33L42.75 25.33 38 30.08 23.75 30.08 23.75 52.25 45.92 52.25 45.92 38 50.67 33.25 50.67 57 19 57 19 25.33Z"></path>
+</svg>
+</span>
+	<div id="weatherWidgetInner" ng-class="[o.language.dir, o.widgetMode.class, o.forecastDaysNum.class, {noLabel: !(o.label_1 || o.label_2), yesLabel: o.label_1 || o.label_2}]" class="ltr both forDays-7 yesLabel">
+	<a class="weatherInfo hidden" href="https://forecast7.com/en/40d71n74d01/new-york/" target="_blank" onmouseenter="more(1)" onmouseleave="more(0)" mg-show="o.weather">
+		<div class="currentWeather" mg-show="!(!o.widgetMode.current &amp;&amp; !(o.label_1 || o.label_2))">
+			<h1 class="locationName ng-binding" mg-show="o.label_1 || o.label_2">NEW YORK<span class="ng-binding"> WEATHER</span></h1>
+
+			<!-- ngRepeat: hacky in o.weather.forecast | limitTo:1 -->
+
+			<div class="currentConditions" mg-show="o.widgetMode.current">
+				<div class="currentTemp ng-binding">NaN°C</div>
+				<div class="currentDesc ng-binding"></div>
+			</div>
+
+		</div>
+
+		<div class="weatherForecast" mg-show="o.widgetMode.forecast">
+			<!-- ngRepeat: day in o.weather.forecast | limitTo:7 -->
+		</div>
+	</a>
+	</div>
+</div>
+
+<script>
+
+	function more(over) {
+		if(over){
+			document.getElementById("openWeather").className = "highlight";
+
+		} else {
+			document.getElementById("openWeather").className = "";
+
+		}
+	}
+
+</script>
+
+<!-- Angular https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js -->
+<script src="./angular-1.5.8.min.js.download"></script>
+
+<!-- Weather Widget Frame app -->
+<script src="./iApp.min.js.download"></script>
+
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"><template shadowrootmode="open"><style>
+      div.grammarly-desktop-integration {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select:none;
+        user-select:none;
+      }
+
+      div.grammarly-desktop-integration:before {
+        content: attr(data-content);
+      }
+    </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
