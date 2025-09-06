@@ -37,7 +37,7 @@ function openWebStory(storyUrl) {
                         <button class="close-btn" onclick="closeWebStory()">&times;</button>
                     </div>
                     <div class="lightbox-body">
-                        <iframe src="${storyUrl}" frameborder="0" width="100%" height="600px"></iframe>
+                        <iframe src="${storyUrl}" frameborder="0" width="100%" height="100%" allowfullscreen style="border: none; background: #000; display: block;" sandbox="allow-scripts allow-same-origin allow-presentation"></iframe>
                     </div>
                 </div>
             </div>
@@ -55,10 +55,39 @@ function openWebStory(storyUrl) {
     lightbox.style.display = 'flex';
     document.body.style.overflow = 'hidden'; // Prevent background scrolling
     
+    // Force iframe to full screen
+    const iframe = lightbox.querySelector('iframe');
+    if (iframe) {
+        const isMobile = window.innerWidth <= 768;
+        
+        if (isMobile) {
+            iframe.style.width = '100vw';
+            iframe.style.height = 'calc(100vh - 60px)';
+            iframe.style.minWidth = '100vw';
+            iframe.style.minHeight = 'calc(100vh - 60px)';
+        } else {
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.style.minWidth = '100%';
+            iframe.style.minHeight = '100%';
+        }
+        
+        iframe.style.objectFit = 'cover';
+        iframe.style.border = 'none';
+        iframe.style.background = '#000';
+    }
+    
     // Close on overlay click
     const overlay = lightbox.querySelector('.lightbox-overlay');
     overlay.addEventListener('click', function(e) {
         if (e.target === overlay) {
+            closeWebStory();
+        }
+    });
+    
+    // Close on escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
             closeWebStory();
         }
     });
