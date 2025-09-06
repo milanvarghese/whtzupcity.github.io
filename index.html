@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>whtzup.city</title>
+    <meta name="description" content="Discover Thiruvananthapuram's pulse with the latest news, events, deals, and community stories. Stay connected with your city!">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Roboto+Slab:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="whtzup.city_files/cropped-whtzup.city_-1-e1724161516382-1.png">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="weather-widget">
+            <a class="weatherwidget-io" href="https://forecast7.com/en/8d5276d94/thiruvananthapuram/" data-label_1="TRIVANDRUM" data-label_2="WEATHER" data-icons="Climacons Animated" data-mode="Forecast" data-days="3" data-theme="pure">TRIVANDRUM WEATHER</a>
+        </div>
+        
+        <div class="logo-section">
+            <img src="whtzup.city_files/cropped-whtzup.city_-1-e1724161516382-1.png" alt="WhtzUp City" class="logo">
+        </div>
+        
+        <div class="hero-content">
+            <div class="animated-headline">
+                <span class="headline-plain-text">Discover Your City's Pulse: Stay Ahead with the Latest </span>
+                <span class="headline-dynamic-wrapper">
+                    <span class="headline-dynamic-text active">Buzz</span>
+                    <span class="headline-dynamic-text">Deals</span>
+                    <span class="headline-dynamic-text">Events</span>
+                </span>
+            </div>
+            
+            <h1 class="main-title">Follow Us</h1>
+            <h6 class="subtitle">Check the following feeds which you are interested to explore the happening stories!!</h6>
+            
+            <!-- Lottie Animation -->
+            <div class="lottie-animation">
+                <div class="e-lottie__container">
+                    <div class="e-lottie__animation" id="lottie-animation"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Featured Stories Section -->
+        <section class="featured-stories">
+            <div class="container">
+                <div class="featured-content">
+                    <div class="featured-text">
+                        <h2>Discover What's Happening</h2>
+                        <p>Explore the latest stories, events, and offers from across Thiruvananthapuram. Stay connected with your city's pulse through our curated content.</p>
+                        <div class="featured-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">32+</span>
+                                <span class="stat-label">Stories</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">24/7</span>
+                                <span class="stat-label">Updates</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">1000+</span>
+                                <span class="stat-label">Readers</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="featured-categories">
+                        <div class="category-highlight" onclick="openWebStory('https://whtzup.city/web-stories/city-festive-specials/')">
+                            <div class="category-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h3>Festive Specials</h3>
+                            <p>Your Festive Calendar of Deals, Events & Celebrations</p>
+                        </div>
+                        <div class="category-highlight" onclick="openWebStory('https://whtzup.city/web-stories/quick-eats/')">
+                            <div class="category-icon">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <h3>Quick Eats</h3>
+                            <p>Fast, Tasty & On-the-Go</p>
+                        </div>
+                        <div class="category-highlight" onclick="openWebStory('https://whtzup.city/web-stories/new-in-city/')">
+                            <div class="category-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h3>New in City</h3>
+                            <p>Latest Openings & Hotspots</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Web Stories Section -->
+        <section class="web-stories-section">
+            <div class="web-stories-container">
+                <div class="section-header">
+                    <h2>Explore All Stories</h2>
+                    <p>Click on any story to discover what's happening in your city</p>
+                </div>
+                <div class="web-stories-list is-view-type-grid columns-4 is-style-default">
+                    <div class="web-stories-list__inner-wrapper">
+                        <!-- Web Story 1 -->
+                        <div class="web-stories-list__story" onclick="openWebStory('https://whtzup.city/web-stories/city-festive-specials/')">
+                            <div class="web-stories-list__story-poster">
+                                <img src="https://whtzup.city/wp-content/uploads/2025/08/cropped-Screenshot-2025-08-27-at-2.58.23%E2%80%AFPM-1.png" alt="City Festive Specials" width="185" height="308" loading="lazy" decoding="async">
+                            </div>
+                            <div class="web-stories-list__story-content-overlay">
+                                <div class="story-content-overlay__title">City Festive Specials</div>
+                                <div class="story-content-overlay__excerpt">Your Festive Calendar of Deals, Events & Celebrations</div>
+                                <div class="story-content-overlay__author">By whtzup.city</div>
+                            </div>
+                        </div>
+
+                        <!-- Web Story 2 -->
+                        <div class="web-stories-list__story" onclick="openWebStory('https://whtzup.city/web-stories/tv-premiere/')">
+                            <div class="web-stories-list__story-poster">
+                                <img src="whtzup.city_files/cropped-Wednesday_n_S2_E3_00_26_46_14R3-H-2025.jpg.webp" alt="TV Premiere" width="185" height="308" loading="lazy" decoding="async">
+                            </div>
+                            <div class="web-stories-list__story-content-overlay">
+                                <div class="story-content-overlay__title">TV Premiere</div>
+                                <div class="story-content-overlay__excerpt">Catch it First, Before the Buzz Begins</div>
+                                <div class="story-content-overlay__author">By whtzup.city</div>
+                            </div>
+                        </div>
+
+                        <!-- Web Story 3 -->
+                        <div class="web-stories-list__story" onclick="openWebStory('https://whtzup.city/web-stories/movie-premieres/')">
+                            <div class="web-stories-list__story-poster">
+                                <img src="whtzup.city_files/cropped-M2.png" alt="Movie Premieres" width="185" height="308" loading="lazy" decoding="async">
+                            </div>
+                            <div class="web-stories-list__story-content-overlay">
+                                <div class="story-content-overlay__title">Movie Premieres</div>
+                                <div class="story-content-overlay__excerpt">Premieres, Glimpses & Celeb Moments</div>
+                                <div class="story-content-overlay__author">By whtzup.city</div>
+                            </div>
+                        </div>
+
+                        <!-- Web Story 4 -->
+                        <div class="web-stories-list__story" onclick="openWebStory('https://whtzup.city/web-stories/social-communities-networks/')">
+                            <div class="web-stories-list__story-poster">
+                                <img src="whtzup.city_files/cropped-960x0-1.jpg" alt="Social Communities & Networks" width="185" height="308" loading="lazy" decoding="async">
+                            </div>
+                            <div class="web-stories-list__story-content-overlay">
+                                <div class="story-content-overlay__title">Social Communities & Networks</div>
+                                <div class="story-content-overlay__excerpt">Bringing People Together!</div>
+                                <div class="story-content-overlay__author">By whtzup.city</div>
+                            </div>
+                        </div>
+
+                        <!-- Web Story 5 -->
+                        <div class="web-stories-list__story" onclick="openWebStory('https://whtzup.city/web-stories/entrepreneurs-collective/')">
+                            <div class="web-stories-list__story-poster">
+                                <img src="whtzup.city_files/cropped-3.png" alt="Entrepreneurs Collective" width="185" height="308" loading="lazy" decoding="async">
+                            </div>
+                            <div class="web-stories-list__story-content-overlay">
+                                <div class="story-content-overlay__title">Entrepreneurs Collective</div>
+                                <div class="story-content-overlay__excerpt">Meet the Game-Changers</div>
+                                <div class="story-content-overlay__author">By whtzup.city</div>
+                            </div>
+                        </div>
+
+                        <!-- Web Story 6 -->
+                        <div class="web-stories-list__story" onclick="openWebStory('https://whtzup.city/web-stories/business-classifieds/')">
+                            <div class="web-stories-list__story-poster">
+                                <img src="whtzup.city_files/cropped-Whtzupcity-Classified-.png" alt="Business Classifieds" width="185" height="308" loading="lazy" decoding="async">
+                            </div>
+                            <div class="web-stories-list__story-content-overlay">
+                                <div class="story-content-overlay__title">Business Classifieds</div>
+                                <div class="story-content-overlay__excerpt">Exclusive Business Brands Listings</div>
+                                <div class="story-content-overlay__author">By whtzup.city</div>
+                            </div>
+                        </div>
+
+                        <!-- Web Story 7 -->
+                        <div class="web-stories-list__story" onclick="openWebStory('https://whtzup.city/web-stories/who-is-who/')">
+                            <div class="web-stories-list__story-poster">
+                                <img src="whtzup.city_files/cropped-who-is-who-5.png" alt="Who is Who" width="185" height="308" loading="lazy" decoding="async">
+                            </div>
+                            <div class="web-stories-list__story-content-overlay">
+                                <div class="story-content-overlay__title">Who is Who</div>
+                                <div class="story-content-overlay__excerpt">Meet the City's Influencers</div>
+                                <div class="story-content-overlay__author">By whtzup.city</div>
+                            </div>
+                        </div>
+
+                        <!-- Web Story 8 -->
+                        <div class="web-stories-list__story" onclick="openWebStory('https://whtzup.city/web-stories/hyatt-regency-thiruvananthapuram/')">
+                            <div class="web-stories-list__story-poster">
+                                <img src="whtzup.city_files/cropped-city.png" alt="Hyatt Regency Thiruvananthapuram" width="185" height="308" loading="lazy" decoding="async">
+                            </div>
+                            <div class="web-stories-list__story-content-overlay">
+                                <div class="story-content-overlay__title">Hyatt Regency Thiruvananthapuram</div>
+                                <div class="story-content-overlay__excerpt"></div>
+                                <div class="story-content-overlay__author">By whtzup.city</div>
+                            </div>
+                        </div>
+
+                        <!-- Web Story 9 -->
+                        <div class="web-stories-list__story" onclick="openWebStory('https://whtzup.city/web-stories/travel-timings-flight-bus-train-metro/')">
+                            <div class="web-stories-list__story-poster">
+                                <img src="whtzup.city_files/cropped-city.png" alt="Travel Timings (Flight/Bus/Train/Metro)" width="185" height="308" loading="lazy" decoding="async">
+                            </div>
+                            <div class="web-stories-list__story-content-overlay">
+                                <div class="story-content-overlay__title">Travel Timings (Flight/Bus/Train/Metro)</div>
+                                <div class="story-content-overlay__excerpt">Plan Your Journey Smartly</div>
+                                <div class="story-content-overlay__author">By whtzup.city</div>
+                            </div>
+                        </div>
+
+                        <!-- Web Story 10 -->
+                        <div class="web-stories-list__story" onclick="openWebStory('https://whtzup.city/web-stories/mental-health-wellness/')">
+                            <div class="web-stories-list__story-poster">
+                                <img src="https://whtzup.city/wp-content/uploads/2024/10/cropped-462265434_1682856592556600_2704536556131164305_n.jpg" alt="Mental Health Wellness" width="185" height="308" loading="lazy" decoding="async">
+                            </div>
+                            <div class="web-stories-list__story-content-overlay">
+                                <div class="story-content-overlay__title">Mental Health Wellness</div>
+                                <div class="story-content-overlay__excerpt">Mind & Wellbeing Matters</div>
+                                <div class="story-content-overlay__author">By whtzup.city</div>
+                            </div>
+                        </div>
+
+                        <!-- Web Story 11 -->
+                        <div class="web-stories-list__story" onclick="openWebStory('https://whtzup.city/web-stories/quick-eats/')">
+                            <div class="web-stories-list__story-poster">
+                                <img src="https://whtzup.city/wp-content/uploads/2024/09/cropped-2023-12-08.jpg" alt="Quick Eats" width="185" height="308" loading="lazy" decoding="async">
+                            </div>
+                            <div class="web-stories-list__story-content-overlay">
+                                <div class="story-content-overlay__title">Quick Eats</div>
+                                <div class="story-content-overlay__excerpt">Fast, Tasty & On-the-Go</div>
+                                <div class="story-content-overlay__author">By whtzup.city</div>
+                            </div>
+                        </div>
+
+                        <!-- Web Story 12 -->
+                        <div class="web-stories-list__story" onclick="openWebStory('https://whtzup.city/web-stories/csr-donation-corner/')">
+                            <div class="web-stories-list__story-poster">
+                                <img src="https://whtzup.city/wp-content/uploads/2024/09/cropped-486162834_10162422713556421_2099254396878562896_n.jpg" alt="CSR & Donation Corner" width="185" height="308" loading="lazy" decoding="async">
+                            </div>
+                            <div class="web-stories-list__story-content-overlay">
+                                <div class="story-content-overlay__title">CSR & Donation Corner</div>
+                                <div class="story-content-overlay__excerpt">Giving Back to the Community</div>
+                                <div class="story-content-overlay__author">By whtzup.city</div>
+                            </div>
+                        </div>
+
+                        <!-- Web Story 13 -->
+                        <div class="web-stories-list__story" onclick="openWebStory('https://whtzup.city/web-stories/cafes/')">
+                            <div class="web-stories-list__story-poster">
+                                <img src="https://whtzup.city/wp-content/uploads/2024/09/cropped-caption.jpg" alt="Cafes" width="185" height="308" loading="lazy" decoding="async">
+                            </div>
+                            <div class="web-stories-list__story-content-overlay">
+                                <div class="story-content-overlay__title">Cafes</div>
+                                <div class="story-content-overlay__excerpt">Brew, Relax & Connect</div>
+                                <div class="story-content-overlay__author">By whtzup.city</div>
+                            </div>
+                        </div>
+
+                        <!-- Web Story 14 -->
+                        <div class="web-stories-list__story" onclick="openWebStory('https://whtzup.city/web-stories/street-food-spots/')">
+                            <div class="web-stories-list__story-poster">
+                                <img src="https://whtzup.city/wp-content/uploads/2024/09/cropped-2019-11-11.jpg" alt="Street Food Spots" width="185" height="308" loading="lazy" decoding="async">
+                            </div>
+                            <div class="web-stories-list__story-content-overlay">
+                                <div class="story-content-overlay__title">Street Food Spots</div>
+                                <div class="story-content-overlay__excerpt">Local Delights & Hidden Gems</div>
+                                <div class="story-content-overlay__author">By whtzup.city</div>
+                            </div>
+                        </div>
+
+                        <!-- Web Story 15 -->
+                        <div class="web-stories-list__story" onclick="openWebStory('https://whtzup.city/web-stories/local-shop-spotlight/')">
+                            <div class="web-stories-list__story-poster">
+                                <img src="https://whtzup.city/wp-content/uploads/2024/09/cropped-z25.jpeg" alt="Local Shop Spotlight" width="185" height="308" loading="lazy" decoding="async">
+                            </div>
+                            <div class="web-stories-list__story-content-overlay">
+                                <div class="story-content-overlay__title">Local Shop Spotlight</div>
+                                <div class="story-content-overlay__excerpt">Shop Small, Shop Smart</div>
+                                <div class="story-content-overlay__author">By whtzup.city</div>
+                            </div>
+                        </div>
+
+                        <!-- Web Story 16 -->
+                        <div class="web-stories-list__story" onclick="openWebStory('https://whtzup.city/web-stories/happy-hour-highlights/')">
+                            <div class="web-stories-list__story-poster">
+                                <img src="https://whtzup.city/wp-content/uploads/2024/08/cropped-WhatsApp-Image-2025-06-13-at-6.34.28-PM.jpeg" alt="Happy Hour Highlights" width="185" height="308" loading="lazy" decoding="async">
+                            </div>
+                            <div class="web-stories-list__story-content-overlay">
+                                <div class="story-content-overlay__title">Happy Hour Highlights</div>
+                                <div class="story-content-overlay__excerpt">Unmissable Food & Drink Deals</div>
+                                <div class="story-content-overlay__author">By whtzup.city</div>
+                            </div>
+                        </div>
+
+                        <!-- Web Story 17 -->
+                        <div class="web-stories-list__story" onclick="openWebStory('https://whtzup.city/web-stories/fast-food-chains/')">
+                            <div class="web-stories-list__story-poster">
+                                <img src="https://whtzup.city/wp-content/uploads/2024/09/cropped-WhatsApp-Image-2024-09-06-at-9.01.21-AM.jpeg" alt="Fast Food Chains" width="185" height="308" loading="lazy" decoding="async">
+                            </div>
+                            <div class="web-stories-list__story-content-overlay">
+                                <div class="story-content-overlay__title">Fast Food Chains</div>
+                                <div class="story-content-overlay__excerpt">Quick Bites, Big Taste</div>
+                                <div class="story-content-overlay__author">By whtzup.city</div>
+                            </div>
+                        </div>
+
+                        <!-- Web Story 18 -->
+                        <div class="web-stories-list__story" onclick="openWebStory('https://whtzup.city/web-stories/music-and-nightlife/')">
+                            <div class="web-stories-list__story-poster">
+                                <img src="https://whtzup.city/wp-content/uploads/2024/09/cropped-2022-09-30.jpg" alt="Music and Nightlife" width="185" height="308" loading="lazy" decoding="async">
+                            </div>
+                            <div class="web-stories-list__story-content-overlay">
+                                <div class="story-content-overlay__title">Music and Nightlife</div>
+                                <div class="story-content-overlay__excerpt">Groove & Party Vibes</div>
+                                <div class="story-content-overlay__author">By whtzup.city</div>
+                            </div>
+                        </div>
+
+                        <!-- Web Story 19 -->
+                        <div class="web-stories-list__story" onclick="openWebStory('https://whtzup.city/web-stories/new-in-city/')">
+                            <div class="web-stories-list__story-poster">
+                                <img src="https://whtzup.city/wp-content/uploads/2024/09/cropped-gallery-1.jpg" alt="New in City" width="185" height="308" loading="lazy" decoding="async">
+                            </div>
+                            <div class="web-stories-list__story-content-overlay">
+                                <div class="story-content-overlay__title">New in City</div>
+                                <div class="story-content-overlay__excerpt">Latest Openings & Hotspots</div>
+                                <div class="story-content-overlay__author">By whtzup.city</div>
+                            </div>
+                        </div>
+
+                        <!-- Web Story 20 -->
+                        <div class="web-stories-list__story" onclick="openWebStory('https://whtzup.city/web-stories/the-huddle/')">
+                            <div class="web-stories-list__story-poster">
+                                <img src="https://whtzup.city/wp-content/uploads/2024/08/cropped-464683239_946717000829715_8157982240042465817_n.jpg" alt="The Huddle Global" width="185" height="308" loading="lazy" decoding="async">
+                            </div>
+                            <div class="web-stories-list__story-content-overlay">
+                                <div class="story-content-overlay__title">The Huddle Global</div>
+                                <div class="story-content-overlay__excerpt"></div>
+                                <div class="story-content-overlay__author">By whtzup.city</div>
+                            </div>
+                        </div>
+
+                        <!-- Web Story 21 -->
+                        <div class="web-stories-list__story" onclick="openWebStory('https://whtzup.city/web-stories/dayout-packages/')">
+                            <div class="web-stories-list__story-poster">
+                                <img src="https://whtzup.city/wp-content/uploads/2024/08/cropped-445654372_433534189422050_6676861961066511584_n.jpg" alt="Staycation & Dayouts" width="185" height="308" loading="lazy" decoding="async">
+                            </div>
+                            <div class="web-stories-list__story-content-overlay">
+                                <div class="story-content-overlay__title">Staycation & Dayouts</div>
+                                <div class="story-content-overlay__excerpt">Relax, Rejuvenate, Explore</div>
+                                <div class="story-content-overlay__author">By whtzup.city</div>
+                            </div>
+                        </div>
+
+                        <!-- Web Story 22 -->
+                        <div class="web-stories-list__story" onclick="openWebStory('https://whtzup.city/web-stories/fitness-and-wellness/')">
+                            <div class="web-stories-list__story-poster">
+                                <img src="https://whtzup.city/wp-content/uploads/2024/08/cropped-453399716_18010444595562892_914460871881335200_n-1.jpg" alt="Fitness and Wellness" width="185" height="308" loading="lazy" decoding="async">
+                            </div>
+                            <div class="web-stories-list__story-content-overlay">
+                                <div class="story-content-overlay__title">Fitness and Wellness</div>
+                                <div class="story-content-overlay__excerpt">Stay Fit, Stay Happy</div>
+                                <div class="story-content-overlay__author">By whtzup.city</div>
+                            </div>
+                        </div>
+
+                        <!-- Web Story 23 -->
+                        <div class="web-stories-list__story" onclick="openWebStory('https://whtzup.city/web-stories/venue-spots/')">
+                            <div class="web-stories-list__story-poster">
+                                <img src="https://whtzup.city/wp-content/uploads/2024/08/cropped-402899867_321001317342005_7281495058351204635_n-1.jpg" alt="Venues Spots" width="185" height="308" loading="lazy" decoding="async">
+                            </div>
+                            <div class="web-stories-list__story-content-overlay">
+                                <div class="story-content-overlay__title">Venues Spots</div>
+                                <div class="story-content-overlay__excerpt">Find the Perfect Event Space</div>
+                                <div class="story-content-overlay__author">By whtzup.city</div>
+                            </div>
+                        </div>
+
+                        <!-- Web Story 24 -->
+                        <div class="web-stories-list__story" onclick="openWebStory('https://whtzup.city/web-stories/realestate-alerts/')">
+                            <div class="web-stories-list__story-poster">
+                                <img src="https://whtzup.city/wp-content/uploads/2024/08/cropped-2r14-1.jpeg" alt="Real Estate Alerts" width="185" height="308" loading="lazy" decoding="async">
+                            </div>
+                            <div class="web-stories-list__story-content-overlay">
+                                <div class="story-content-overlay__title">Real Estate Alerts</div>
+                                <div class="story-content-overlay__excerpt">Your Next Property Awaits</div>
+                                <div class="story-content-overlay__author">By whtzup.city</div>
+                            </div>
+                        </div>
+
+                        <!-- Web Story 25 -->
+                        <div class="web-stories-list__story" onclick="openWebStory('https://whtzup.city/web-stories/buffet-lunch-dinner/')">
+                            <div class="web-stories-list__story-poster">
+                                <img src="https://whtzup.city/wp-content/uploads/2024/08/cropped-344925221_899293197845936_4116389714965076761_n.jpg" alt="Buffet – Breakfast Brunch Lunch & Dinner" width="185" height="308" loading="lazy" decoding="async">
+                            </div>
+                            <div class="web-stories-list__story-content-overlay">
+                                <div class="story-content-overlay__title">Buffet – Breakfast Brunch Lunch & Dinner</div>
+                                <div class="story-content-overlay__excerpt">Feast Like a King!</div>
+                                <div class="story-content-overlay__author">By whtzup.city</div>
+                            </div>
+                        </div>
+
+                        <!-- Web Story 26 -->
+                        <div class="web-stories-list__story" onclick="openWebStory('https://whtzup.city/web-stories/hotels-resorts/')">
+                            <div class="web-stories-list__story-poster">
+                                <img src="https://whtzup.city/wp-content/uploads/2024/08/cropped-426137461_120204519986050540_8288384473148851123_n.jpg" alt="Hotels & Resorts" width="185" height="308" loading="lazy" decoding="async">
+                            </div>
+                            <div class="web-stories-list__story-content-overlay">
+                                <div class="story-content-overlay__title">Hotels & Resorts</div>
+                                <div class="story-content-overlay__excerpt">Luxury Stays and Getaways</div>
+                                <div class="story-content-overlay__author">By whtzup.city</div>
+                            </div>
+                        </div>
+
+                        <!-- Web Story 27 -->
+                        <div class="web-stories-list__story" onclick="openWebStory('https://whtzup.city/web-stories/healthcare-and-wellness/')">
+                            <div class="web-stories-list__story-poster">
+                                <img src="https://whtzup.city/wp-content/uploads/2024/08/cropped-448269317_860683989417713_7149408565744435966_n.jpg" alt="Healthcare" width="185" height="308" loading="lazy" decoding="async">
+                            </div>
+                            <div class="web-stories-list__story-content-overlay">
+                                <div class="story-content-overlay__title">Healthcare</div>
+                                <div class="story-content-overlay__excerpt">Wellness, Care & Medical Help</div>
+                                <div class="story-content-overlay__author">By whtzup.city</div>
+                            </div>
+                        </div>
+
+                        <!-- Web Story 28 -->
+                        <div class="web-stories-list__story" onclick="openWebStory('https://whtzup.city/web-stories/fashion-finds/')">
+                            <div class="web-stories-list__story-poster">
+                                <img src="https://whtzup.city/wp-content/uploads/2024/08/cropped-e3ff.jpeg.avif" alt="Fashion Finds" width="185" height="308" loading="lazy" decoding="async">
+                            </div>
+                            <div class="web-stories-list__story-content-overlay">
+                                <div class="story-content-overlay__title">Fashion Finds</div>
+                                <div class="story-content-overlay__excerpt">Trendy Styles & Local Designers</div>
+                                <div class="story-content-overlay__author">By whtzup.city</div>
+                            </div>
+                        </div>
+
+                        <!-- Web Story 29 -->
+                        <div class="web-stories-list__story" onclick="openWebStory('https://whtzup.city/web-stories/home-bakes-chefs/')">
+                            <div class="web-stories-list__story-poster">
+                                <img src="https://whtzup.city/wp-content/uploads/2024/08/cropped-454205303_2680729192087222_1101295896382526920_n.jpg" alt="Home Bakes and Chefs" width="185" height="308" loading="lazy" decoding="async">
+                            </div>
+                            <div class="web-stories-list__story-content-overlay">
+                                <div class="story-content-overlay__title">Home Bakes and Chefs</div>
+                                <div class="story-content-overlay__excerpt">Freshly Baked, Homemade Goodness</div>
+                                <div class="story-content-overlay__author">By whtzup.city</div>
+                            </div>
+                        </div>
+
+                        <!-- Web Story 30 -->
+                        <div class="web-stories-list__story" onclick="openWebStory('https://whtzup.city/web-stories/home-and-living/')">
+                            <div class="web-stories-list__story-poster">
+                                <img src="https://whtzup.city/wp-content/uploads/2024/08/cropped-WhatsApp-Image-2024-08-05-at-12.42.13-PM-3.jpeg" alt="Home and Living" width="185" height="308" loading="lazy" decoding="async">
+                            </div>
+                            <div class="web-stories-list__story-content-overlay">
+                                <div class="story-content-overlay__title">Home and Living</div>
+                                <div class="story-content-overlay__excerpt">Interiors, Decor & Lifestyle</div>
+                                <div class="story-content-overlay__author">By whtzup.city</div>
+                            </div>
+                        </div>
+
+                        <!-- Web Story 31 -->
+                        <div class="web-stories-list__story" onclick="openWebStory('https://whtzup.city/web-stories/events-calendar/')">
+                            <div class="web-stories-list__story-poster">
+                                <img src="https://whtzup.city/wp-content/uploads/2024/08/cropped-530873565_17955817331993711_7930391004675391475_n.jpg" alt="Upcoming Events" width="185" height="308" loading="lazy" decoding="async">
+                            </div>
+                            <div class="web-stories-list__story-content-overlay">
+                                <div class="story-content-overlay__title">Upcoming Events</div>
+                                <div class="story-content-overlay__excerpt"></div>
+                                <div class="story-content-overlay__author">By whtzup.city</div>
+                            </div>
+                        </div>
+
+                        <!-- Web Story 32 -->
+                        <div class="web-stories-list__story" onclick="openWebStory('https://whtzup.city/web-stories/restaurants/')">
+                            <div class="web-stories-list__story-poster">
+                                <img src="https://whtzup.city/wp-content/uploads/2024/08/cropped-WhatsApp-Image-2025-06-13-at-6.27.43-PM.jpeg" alt="Restaurants" width="185" height="308" loading="lazy" decoding="async">
+                            </div>
+                            <div class="web-stories-list__story-content-overlay">
+                                <div class="story-content-overlay__title">Restaurants</div>
+                                <div class="story-content-overlay__excerpt">Dine & Discover Flavors</div>
+                                <div class="story-content-overlay__author">By whtzup.city</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-text">
+                <div class="animated-headline">
+                    <span class="headline-plain-text">Whtzup.city, from the House of</span>
+                    <span class="headline-dynamic-wrapper">
+                        <span class="headline-dynamic-text active">Virtual Medias</span>
+                        <span class="headline-dynamic-text">The Kitchen</span>
+                        <span class="headline-dynamic-text">Lifeart</span>
+                    </span>
+                </div>
+                <div class="footer-logo-container">
+                    <img src="whtzup.city_files/footer.png" alt="Footer" class="footer-image">
+                </div>
+            </div>
+            
+            <div class="footer-info">
+                <p><strong>Ready to Take Your Business to the Next Level?</strong></p>
+                <p>Partner with Whtzup.city and connect with a wider audience across Thiruvananthapuram, Kochi, and Calicut!</p>
+                <p>It's quick, easy, and the perfect way to showcase your brand and boost visibility in your local community. Let's make your brand the talk of the town!</p>
+                <p>Connect us now: <a href="tel:+918129255552">+91 81292 55552</a></p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <h6><a href="https://whtzup.city/terms-conditions/" target="_blank" rel="noopener">Terms & Conditions</a> | <a href="https://whtzup.city/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></h6>
+        </div>
+    </footer>
+
+
+    <!-- Scripts -->
+    <script src="https://weatherwidget.io/js/widget.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

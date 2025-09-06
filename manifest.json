@@ -1,0 +1,21 @@
+{
+    "name": "WhtzUp City - Thiruvananthapuram's Digital Hub",
+    "short_name": "WhtzUp City",
+    "description": "Discover Thiruvananthapuram's pulse with the latest news, events, deals, and community stories.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#2563eb",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "whtzup.city_files/cropped-whtzup.city_-1-e1724161516382-1.png",
+            "sizes": "512x258",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": ["news", "lifestyle", "entertainment"],
+    "lang": "en-US",
+    "dir": "ltr"
+}
